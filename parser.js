@@ -21,3 +21,32 @@ function parseList(insaneList) {
 }
 
 parseList(emailList);
+
+
+function parseList(insaneList, needFirstLast) {
+  saneList = insaneList.split('"')
+                         .join('')
+                         .split(',')
+                         .join('')
+                         .split('>');
+
+  for (var i = 0; i < saneList.length; i++) {
+    var person = saneList[i].split('<');
+
+    if (person[0][0] === ' ') {
+      person[0] = person[0].substring(1);
+    }
+
+    // Need to remove last space too
+
+    if (needFirstLast) {
+      person[0] = person[0].split(' ');
+      person.unshift(person[0].shift());
+      console.log(person[0] + '\t' + person[1] + '\t' + person[2]);
+    } else {
+      console.log(person[0] + '\t' + person[1]);
+    }
+  }
+}
+
+parseList(emailList, true);
