@@ -26,3 +26,14 @@ function parseList(insaneList) {
 
   return saneList;
 }
+
+
+function assert(expected, actual, testName) {
+  var testActual = JSON.stringify(actual);
+  var testExp = JSON.stringify(expected);
+  if (testActual !== testExp) {
+    console.log('FAILED! ' + testName + ' Expected ' + testExp + ' but got ' + testActual)
+  } else {
+    console.log('PASSED! ' + testName);
+  }
+}
