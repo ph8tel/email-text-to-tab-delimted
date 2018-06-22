@@ -37,6 +37,10 @@ function parseList(insaneList, needFirstLast) {
       person[0] = person[0].substring(1);
     }
 
+    if (person[0][person[0].length - 1] === ' ') {
+      person[0] = person[0].substring(0, person[0].length - 1);
+    }
+
     // Need to remove last space too
 
     if (needFirstLast) {
