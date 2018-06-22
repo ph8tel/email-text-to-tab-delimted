@@ -2,22 +2,27 @@
 
 // Example ' node parser.js > emails.tab '
 
-var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, "(null) (null)" <no@gmail.com>';
+const fs = require('fs')
 
-function parseList(insaneList) {
-  saneList = insaneList.split('"')
-                         .join('')
-                         .split(',')
-                         .join('')
-                         .split('>');
 
-  for (var i = 0; i < saneList.length; i++) {
-    var person = saneList[i].split('<');
-    if (person[0][0] === ' ') {
-      person[0] = person[0].substring(1);
+fs.readFile('./emails.txt', 'utf8', (error, data) => {
+    if (error) {
+        console.error(error.message)
     }
-    console.log(person[0] + '\t' + person[1]);
-  }
-}
 
-parseList(emailList);
+    saneList = data.split('"')
+        .join('')
+        .split(',')
+        .join('')
+        .split('>');
+
+    for (var i = 0; i < saneList.length; i++) {
+        var person = saneList[i].split('<');
+        if (person[0][0] === ' ') {
+            person[0] = person[0].substring(1);
+        }
+        console.log(person[0] + '\t' + person[1]);
+        //If fs can read a file, can it write one too?
+        //https://nodejs.org/api/fs.html
+    }
+})
