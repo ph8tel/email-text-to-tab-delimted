@@ -22,8 +22,6 @@ function parseList(insaneList, needFirstLast) {
       person[0] = person[0].substring(0, person[0].length - 1);
     }
 
-    // Need to remove last space too
-
     if (needFirstLast) {
       person[0] = person[0].split(' ');
       person.unshift(person[0].shift());
