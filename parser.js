@@ -6,8 +6,7 @@ function parseList(insaneList) {
   emailList.split('"')
            .join('')
            .split(',')
-  // Split by Commas
-  // Prepend "Name" /t "Email"
+           .unshift(['Name', 'Email']);
   // Iterate over all new arrays
     // Recursivly
       // Split each by spaces
