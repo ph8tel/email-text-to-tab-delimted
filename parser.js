@@ -19,3 +19,5 @@ function parseList(insaneList) {
     console.log(person[0] + '\t' + person[1]);
   }
 }
+
+parseList(emailList);
