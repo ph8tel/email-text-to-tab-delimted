@@ -18,7 +18,7 @@ function parseList(insaneList) {
               //make its name the characters before the @ sign
             // If not
               // Set the array to null
-        // Join all array elements before last to make name
+        // Join all array elements before last to make name with a space
         // Join name and email with a tab
         // iterate over list and remove any null elements
     // Join all name/email arrays with /n
@@ -37,3 +37,8 @@ function assert(expected, actual, testName) {
     console.log('PASSED! ' + testName);
   }
 }
+// Struggle.....how do you assert the output is the same when you are joining with /n and /t.....
+
+// ?? MAybe???
+
+assert('"Name"/t"Email"/nMatt Weber/tmatt@gmail.com/nKira Weber/tkira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>'')
