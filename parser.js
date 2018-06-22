@@ -11,6 +11,9 @@ function parseList(insaneList) {
 
   for (var i = 0; i < saneList.length; i++) {
     var person = saneList[i].split('<');
+    if (person[0][0] === ' ') {
+      person[0] = person[0].substring(1);
+    }
     console.log(person[0] + '\t' + person[1]);
   }
 }
