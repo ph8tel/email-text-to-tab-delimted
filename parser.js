@@ -3,14 +3,14 @@
 var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, "(null) (null)" <no@gmail.com>';
 
 function parseList(insaneList) {
-  insaneList = insaneList.split('"')
+  saneList = insaneList.split('"')
                          .join('')
                          .split(',')
                          .join('')
                          .split('>');
 
-  for (var i = 0; i < insaneList.length; i++) {
-    var person = insaneList[i].split('<');
+  for (var i = 0; i < saneList.length; i++) {
+    var person = saneList[i].split('<');
     console.log(person[0] + '\t' + person[1]);
   }
 }
