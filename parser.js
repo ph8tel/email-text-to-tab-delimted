@@ -3,8 +3,7 @@
 var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>';
 
 function parseList(insaneList) {
-  // Iterate over the charcters of the list
-    // Remove any quotations or paretheses
+  emailList.split('"').join('');
   // Split by Commas
   // Prepend "Name" /t "Email"
   // Iterate over all new arrays
