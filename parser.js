@@ -1,6 +1,6 @@
 // Create array with values.
 
-var emailList = ['Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>'];
+var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>';
 
 function parseList(insaneList) {
   // Iterate over the charcters of the list
@@ -20,6 +20,14 @@ function parseList(insaneList) {
         // iterate over list and remove any null elements
         // Console log the first eleement + tab + email + new line
 }
+
+
+
+
+
+
+
+
 
 /*
 I've Decided that building an assert function and teaching myself to make it work
