@@ -1,6 +1,6 @@
 // Create array with values.
 
-var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>';
+var emailList = 'Matt Weber <matt@gmail.com>, Kira Weber <kira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, "(null) (null)" <no@gmail.com>';
 
 function parseList(insaneList) {
   insaneList = insaneList.split('"')
@@ -9,16 +9,11 @@ function parseList(insaneList) {
                          .join('')
                          .split('>');
 
-  console.log(insaneList);
-  // Iterate over all new arrays
-    // Recursivly
-      // Split each by spaces
-        // If length of split array is 1
-          // Check if it contains an @ sign
-            // If so
-              //make its name the characters before the @ sign
-            // If not
-              // Set the array to null
+  for (var i = 0; i < insaneList.length; i++) {
+    var person = insaneList[i].split('<');
+    console.log(person[0] + '\t' + person[1]);
+  }
+
         // Join all array elements before last to make name with a space
         // iterate over list and remove any null elements
         // Console log the first eleement + tab + email + new line
