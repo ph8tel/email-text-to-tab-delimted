@@ -19,13 +19,16 @@ function parseList(insaneList) {
             // If not
               // Set the array to null
         // Join all array elements before last to make name with a space
-        // Join name and email with a tab
         // iterate over list and remove any null elements
-    // Join all name/email arrays with /n
-    // Write to a .tab file
+        // Console log the first eleement + tab + email + new line
 
   return saneList;
 }
+
+/*
+I've Decided that building an assert function and teaching myself to make it work
+for this scenario would take longer than I have time to accomplish the mission today
+So I am tabling this to come back and learn it later
 
 
 function assert(expected, actual, testName) {
@@ -42,3 +45,4 @@ function assert(expected, actual, testName) {
 // ?? MAybe???
 
 assert('"Name"/t"Email"/nMatt Weber/tmatt@gmail.com/nKira Weber/tkira@gmail.com>, "Vera Savich, MA, LMFT" <vera@hotmail.com>, 831Shooter <831shooter@yahoo.com>, <test@att.net>, "(null) (null)" <no@gmail.com>'')
+*/
