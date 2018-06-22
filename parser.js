@@ -15,6 +15,9 @@ function parseList(insaneList) {
   }
 }
 
+// TO FIX
+// Added spaces
+// Mutating input
 
 
 
