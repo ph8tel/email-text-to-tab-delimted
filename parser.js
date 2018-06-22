@@ -13,10 +13,6 @@ function parseList(insaneList) {
     var person = insaneList[i].split('<');
     console.log(person[0] + '\t' + person[1]);
   }
-
-        // Join all array elements before last to make name with a space
-        // iterate over list and remove any null elements
-        // Console log the first eleement + tab + email + new line
 }
 
 
